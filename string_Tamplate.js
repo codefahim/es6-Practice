@@ -40,3 +40,22 @@ const number = (x, y) => {
         return x * y;
     }
     // console.log(number(5, 7));
+
+// multiple array in one array with es6
+const name = ['fahim', 'abdullah'];
+const age = [52, 96];
+const people = [...name, ...age];
+// console.log(people);
+
+
+const x = 650;
+const y = 658;
+const z = 596;
+const maxNumber = Math.max(x, y, z);
+// console.log(maxNumber);
+
+const xman = [47, 95, 125, 74, 85, 3, 6, 15];
+const yman = [96, 75, 85, 25, 45, 01, 23, 56];
+const xyman = [...xman, ...yman];
+const maxMan = Math.max(...xyman);
+// console.log(maxMan);
