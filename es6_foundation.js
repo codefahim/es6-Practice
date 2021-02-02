@@ -59,3 +59,23 @@ const yman = [96, 75, 85, 25, 45, 01, 23, 56];
 const xyman = [...xman, ...yman];
 const maxMan = Math.max(...xyman);
 // console.log(maxMan);
+
+
+class Yougerbrother {
+    constructor() {
+        const this.name = 'fahim';
+    }
+}
+
+// class with es6
+class ClassMate extends Yougerbrother {
+    constructor(name, age) {
+        super();
+
+        this.age = age;
+    }
+};
+const classSix = new ClassMate('fahim', 40);
+const classSeven = new ClassMate('fahima', 10);
+console.log(classSix);
+// console.log(classSeven);
