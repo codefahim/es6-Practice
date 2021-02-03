@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random user Api</title>
+</head>
+
+<body>
+
+    <h3>Full Name: <span id="name"></span></h3>
+    <h4>Phone Number: <span id="phone"></span></h4>
+
+
+    <script>
+        function userData() {
+            fetch('https://randomuser.me/api')
+                .then(response => response.json())
+
+            .then(data => {
+                const name = data.results[0].name;
+                const phone = data.results[0].phone;
+                const fullName = `${name.title} ${name.first} ${name.last}`
+                document.getElementById('name').innerText = fullName;
+                document.getElementById('phone').innerText = phone;
+                console.log(phone);
+            })
+        }
+        setInterval(() => {
+            userData();
+        }, 3000);
+    </script>
+</body>
+
+</html>
