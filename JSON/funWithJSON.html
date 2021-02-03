@@ -8,9 +8,13 @@
 </head>
 
 <body>
+    <style>
+
+    </style>
     <div>
-        <h3 id="location"></h3>
-        <p id="key"></p>
+        <h3>Your Daily task: <span id="location"></span></h3>
+        <p>Key: <span id="key"> </span></p>
+        <h6>Price: <span id="price"></span></h6>
     </div>
     <script>
         function apiFun() {
@@ -18,7 +22,10 @@
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('location').innerText = data.activity;
+                    document.getElementById('location').style.color = 'goldenrod';
                     document.getElementById('key').innerText = data.key;
+                    document.getElementById('key').innerText = data.key;
+                    document.getElementById('price').innerText = data.price;
                     console.log(data);
                 })
         }
