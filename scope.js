@@ -1,11 +1,11 @@
-function clocks() {
+function incrise() {
     let count = 0;
-
     return function() {
         count++;
         return count;
     }
 }
-const clock1 = clocks();
-const clock2 = clocks();
-console.log(clock1, clock2);
+const result = incrise();
+console.log(result);
+const result1 = incrise();
+console.log(result1);
