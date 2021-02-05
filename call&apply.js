@@ -16,10 +16,25 @@ const yearlyCost = {
     home: 0,
     food: 5000 * 12,
     totalSave: 0,
+    firstName: 'fahima',
     saveMoney: function(yearlyIncome) {
         this.totalSave = yearlyIncome - (this.homeRent + this.mobileBill + this.home + this.food);
-        return this.totalSave;
+        return [this.totalSave, this.firstName];
     }
 }
 yearlyCost.saveMoney(240000);
 // console.log(yearlyCost.totalSave);
+
+
+
+const monthCost = {
+    homeRent: 2300 * 12,
+    mobileBill: 8000 * 12,
+    home: 0,
+    food: 5000 * 12,
+    totalSave: 0,
+    firstName: 'fahim'
+};
+const monthly = yearlyCost.saveMoney.bind(monthCost);
+console.log(yearlyCost.saveMoney(240000));
+console.log(monthly(240000));
